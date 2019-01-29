@@ -1,0 +1,8 @@
+---
+- name: templatize init.d service script
+  become: yes
+  become_user: root
+  template:
+    src: init.d-template.j2
+    dest: /etc/init.d/myd
+    mode: '0751'

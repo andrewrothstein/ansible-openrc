@@ -1,0 +1,9 @@
+---
+- name: install openrc pkg
+  become: yes
+  become_user: root
+  with_items:
+    - openrc
+  package:
+    name: '{{ item }}'
+    state: present
