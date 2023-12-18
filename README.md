@@ -22,11 +22,7 @@ See [meta/main.yml](meta/main.yml)
 Example Playbook
 ----------------
 
-```yml
-- hosts: servers
-  roles:
-    - andrewrothstein.openrc
-```
+See [test.yml](test.yml)
 
 License
 -------
