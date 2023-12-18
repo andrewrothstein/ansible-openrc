@@ -1,9 +1,9 @@
 #!/bin/sh
 
-SERVICE_NAME={{ openrc_service_name }}
-DAEMON={{ openrc_service_daemon }}
-DAEMON_OPTS="{{ openrc_service_daemon_opts }}"
-PIDFILE={{ pidfile }}
+SERVICE_NAME={{ openrc_config.name | quote }}
+DAEMON={{ openrc_config.daemon | quote }}
+DAEMON_OPTS={{ openrc_config.daemon_opts | quote }}
+PIDFILE={{ openrc_pidfile | quote }}
 
 if [ ! -x $DAEMON ]; then
   echo "ERROR: Can't execute $DAEMON."
@@ -43,15 +43,16 @@ status_service() {
     printf "%-50s" "Checking $SERVICE_NAME..."
     if [ -f $PIDFILE ]; then
         PID=`cat $PIDFILE`
-        if [ -z "`ps axf | grep ${PID} | grep -v grep`" ]; then
+        if [ -z "`ps axf | grep ${PID} | grep -v grep`" ];
+        then
             printf "%s\n" "Process dead but pidfile exists"
-            exit 1 
+            exit 1
         else
             echo "Running"
         fi
     else
         printf "%s\n" "Service not running"
-        exit 3 
+        exit 3
     fi
 }
 
@@ -71,7 +72,7 @@ case "$1" in
     ;;
   *)
     echo "Usage: service $SERVICE_NAME {start|stop|restart|status}" >&2
-    exit 1   
+    exit 1
     ;;
 esac
 

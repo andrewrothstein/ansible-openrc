@@ -1,5 +1,15 @@
 ---
 - hosts: all
-  roles:
-    - role: '{{ playbook_dir }}'
-      tags: installinsidedocker defineservice
+  vars:
+    openrc_config:
+      name: iperf3
+      daemon: /usr/bin/iperf3
+      daemon_opts: -s
+  tasks:
+    - name: Install iperf3
+      ansible.builtin.package:
+        name: iperf3
+        state: present
+    - name: Install iperf3 service
+      ansible.builtin.include_role:
+        name: '{{ playbook_dir }}'

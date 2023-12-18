@@ -1,6 +1,6 @@
-andrewrothstein.alpine-openrc
+andrewrothstein.openrc
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-alpine-openrc.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-alpine-openrc)
+![Build Status](https://github.com/andrewrothstein/ansible-openrc/actions/workflows/build.yml/badge.svg)
 
 Creates [Open-RC](https://en.wikipedia.org/wiki/OpenRC) service definitions. Heavily inspired by [this](http://www.lexicallyscoped.com/2013/04/02/simple-init.d-script-for-ansible.html).
 
@@ -25,7 +25,7 @@ Example Playbook
 ```yml
 - hosts: servers
   roles:
-    - andrewrothstein.alpine-openrc
+    - andrewrothstein.openrc
 ```
 
 License

@@ -1,5 +1,1 @@
 ---
-- name: Ensure my daemon myd is started
-  service:
-    name: myd
-    state: started

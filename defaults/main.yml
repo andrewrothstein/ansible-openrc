@@ -1,6 +1,6 @@
 ---
 # defaults file for openrc
-openrc_daemon: /home/vagrant/.virtualenvs/twisted/bin/twistd
-openrc_pidfile: /var/run/myd.pid
-openrc_daemon_opts: -y /home/vagrant/app/myd.py --pidfile=/var/run/myd.pid --logfile=/var/log/myd.log
-openrc_name: myd
+# openrc_config:
+#   name: myd
+#   daemon: /home/vagrant/.virtualenvs/twisted/bin/twistd
+#   daemon_opts: -y /home/vagrant/app/myd.py --pidfile=/var/run/myd.pid --logfile=/var/log/myd.log
