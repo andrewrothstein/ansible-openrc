@@ -36,5 +36,5 @@ MIT
 Author Information
 ------------------
 
-Andrew Rothstein <andrew.rothstein@gmail.com>
-Fredrik Dyrkell <fredrik.dyrkell@gmail.com>
+* Andrew Rothstein <andrew.rothstein@gmail.com>
+* Fredrik Dyrkell <fredrik.dyrkell@gmail.com>
