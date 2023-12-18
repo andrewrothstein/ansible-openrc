@@ -3,6 +3,7 @@
   vars:
     openrc_config:
       name: iperf3
+      enabled: false
       daemon: /usr/bin/iperf3
       daemon_opts: -s
   tasks:

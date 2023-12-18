@@ -7,9 +7,9 @@
     src: init.d-template.j2
     dest: '{{ openrc_initd }}'
     mode: '751'
-- name: Ensuring {{ openrc_config.name }} service is started
+- name: Ensuring {{ openrc_config.name }} service is {{ openrc_eff_state }}
   become: true
   become_user: root
   service:
     name: '{{ openrc_config.name }}'
-    state: started
+    state: '{{ openrc_eff_state }}'

@@ -2,3 +2,9 @@
 # vars file for openrc
 openrc_pidfile: /var/run/{{ openrc_config.name }}.pid
 openrc_initd: /etc/init.d/{{ openrc_config.name }}
+openrc_eff_state: |-
+  {%- if openrc_config.enabled -%}
+  started
+  {%- else -%}
+  stopped
+  {%- endif -%}
